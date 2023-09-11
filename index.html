@@ -1,0 +1,371 @@
+<html>
+    <head> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Days+One&family=Work+Sans&display=swap" rel="stylesheet">
+
+        <title>we</title>
+        <style>
+
+            body{
+
+                background: linear-gradient(to bottom, #ffffff, #b5f2ee);
+
+            }
+            .navbar {
+                display: flex;
+                background-color: #a382da;
+                justify-content: center;
+                position: fixed;
+                 top: 0;
+                width: 100%;
+                 font-family: 'Days One', sans-serif;
+                z-index: 9999; /* Add a higher z-index to ensure the navbar is on top */
+                   }
+
+.testyourluck {
+  font-size: 2rem;
+}
+
+
+.content-gamerules {
+  text-align: center;
+  margin-top: 120px; /* Adjust the margin as needed to create space below the navbar */
+}
+#game{
+                position: relative;
+                /* top:110px  ; */
+                /* left: 680px; */
+                background-color:lightblue;
+                color: black;
+                border-color: black;
+                border-radius: 12px;
+                
+                padding: 10px;
+                transition: transform 0.2s;
+                
+                
+            }
+            #game:hover{
+                transform: scale(1.2);
+            }
+        .offcanvas-start{
+            z-index: 9999;;
+        }
+
+
+
+.content-howmanyfingers {
+  text-align: center;
+  margin-top: 20px; /* Adjust the margin as needed to create space below the navbar */
+  font-family: 'Days One', sans-serif;
+}
+
+.how {
+    
+  font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 767px) {
+  .testyourluck {
+    font-size: 1.5rem;
+    transform: scale(1.3);
+  }
+}
+
+
+
+
+
+button{
+                
+                justify-content: center;
+                background-color: lightblue ;
+                color: black;
+                max-width: 100%;
+                height: 50px;
+                width: 50px;
+                margin: 15px;
+                transition: transform 0.2s;
+                border-radius: 4px;
+            }
+            button:hover{
+                /* color: rgb(65, 243, 0); */
+                transform: scale(1.3)
+            }
+.content-buttons{
+    text-align: center;
+    margin-top: 22px;
+}
+
+.content-oops{
+    /* display: none; */
+    text-align: center;
+    margin-top: 19px;
+    font-size: 1.3rem;
+    font-family: 'Days One', sans-serif;
+}
+
+.content-yourscore{
+    text-align: center;
+    margin-top: 39px;
+      font-family: 'Days One', sans-serif;
+      font-size: 1.5rem;
+}
+
+
+.content-viewmyluck{
+    text-align: center;
+    margin-top: -5px;
+      font-family: 'Days One', sans-serif;
+      font-size: 1.1rem;
+}
+
+
+ .viewmyluck{
+    width: 100px;
+    height: 77px;
+}
+
+.content-reset{
+    text-align: center;
+    margin-top: 30px;
+    font-family: 'Days One', sans-serif;
+}
+#reset{
+    height: 60px;
+    width: 65px;
+}
+
+.content-developed{
+    text-align: center;
+    margin-top: 13px;
+    font-family: 'Days One', sans-serif;
+        font-size: 1.1rem;
+}
+
+
+
+
+
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="navbar">
+            <p class="testyourluck">Test Your Luck! &#128515</p>
+          </div>
+
+
+          <div class="content-gamerules">
+            <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample" id="game">
+                <strong>&#9432; Game Rules</strong>
+              </a>
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Game rules</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <div>
+                    &bull; Computer is randomly holding fingers between   0 - 5 <br><br>
+                    &bull; You have to choose the option between 0 - 5  <br><br>
+                    &bull; If your answer matches with computer then you will get a point and if it does not match, you can try again. <br> <br>
+                    &bull; You can check your luck percentage by clicking the "View my Luck %" button <br> <br><br>
+                    &bull; The luck percentage indicates the accuracy of the player's guesses compared to the computer's hidden number.<br> <br><br><br><br><br>
+                    <i> <strong> Developed by Kandarp Vaghela </strong></i>
+            
+                  </div>
+                  
+                </div>
+              </div>    
+        </div>
+
+          
+          <div class="content-howmanyfingers">
+            <p class="how">How many fingers am I holding up?</p>
+
+          <div class="content-buttons">
+            <button id="guess0">0</button>
+            <button id="guess1">1</button>
+            <button id="guess2">2</button>
+            <button id="guess3">3</button>
+            <button id="guess4">4</button>
+            <button id="guess5">5</button>
+           </div>
+        </div>
+
+
+
+        <div class="content-oops">
+            <p id="oops"> </p>
+        </div>
+
+
+
+        <div class="content-yourscore">
+            <p id="yourscore">Your Score : 0 </p>
+        </div>
+
+
+
+
+        <div class="content-viewmyluck">
+            <button class="viewmyluck" id="luck"> View My Luck %</button>
+        </div>
+
+          
+
+        <div class="content-reset">
+            <button id="reset" onClick="history.go(0);">Reset</button>
+        </div>
+
+
+
+        <div class="content-developed">
+            <p><i>Developed By :- Kandarp Vaghela</i></p>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+
+var score =0;
+            var count =0;
+           document.getElementById("guess1").onclick = function(){
+                
+                var randomNumberChoosed = 1;
+
+                var randomNumber = (Math.floor(Math.random() *6));
+                count++
+                if(randomNumberChoosed==randomNumber)
+                {
+                    // alert("You got it!") 
+                    score++;
+                    document.getElementById("oops").innerHTML ="You got it! ";
+                    document.getElementById("yourscore").innerHTML ="Your score : " + score;
+                }
+                else{
+                    // alert("The number was " + randomNumber)
+                    document.getElementById("oops").innerHTML ="Oops! The number was " + randomNumber;
+                    
+                }
+           }
+
+
+           document.getElementById("guess0").onclick = function(){
+                
+                var randomNumberChoosed = 0;
+
+                var randomNumber = (Math.floor(Math.random() *6));
+                count++
+                if(randomNumberChoosed==randomNumber)
+                {
+                    score++;
+                    document.getElementById("oops").innerHTML ="You got it! ";
+                    document.getElementById("yourscore").innerHTML ="Your score : " + score;                }
+                else{
+                    document.getElementById("oops").innerHTML ="Oops! The number was " + randomNumber;
+                }
+           }
+
+
+           document.getElementById("guess2").onclick = function(){
+                
+                var randomNumberChoosed = 2;
+
+                var randomNumber = (Math.floor(Math.random() *6));
+                count++
+                if(randomNumberChoosed==randomNumber)
+                {
+                    score++;
+                    document.getElementById("oops").innerHTML ="You got it! ";
+                    document.getElementById("yourscore").innerHTML ="Your score : " + score;                }
+                else{
+                    document.getElementById("oops").innerHTML ="Oops! The number was " + randomNumber;
+                }
+           }
+
+           document.getElementById("guess3").onclick = function(){
+                
+                var randomNumberChoosed = 3;
+
+                var randomNumber = (Math.floor(Math.random() *6));
+                count++
+                if(randomNumberChoosed==randomNumber)
+                {
+                    score++;
+                    document.getElementById("oops").innerHTML ="You got it! ";
+                    document.getElementById("yourscore").innerHTML ="Your score : " + score;                }
+                else{
+                    document.getElementById("oops").innerHTML ="Oops! The number was " + randomNumber;
+                }
+           }
+
+
+           document.getElementById("guess4").onclick = function(){
+                
+                var randomNumberChoosed = 4;
+
+                var randomNumber = (Math.floor(Math.random() *6));
+                count++
+                if(randomNumberChoosed==randomNumber)
+                {
+                    score++;
+                    document.getElementById("oops").innerHTML ="You got it! ";
+                    document.getElementById("yourscore").innerHTML ="Your score : " + score;                     
+                
+                }
+                else{
+                    document.getElementById("oops").innerHTML ="Oops! The number was " + randomNumber;
+                }
+           }
+
+
+           document.getElementById("guess5").onclick = function(){
+                
+                var randomNumberChoosed = 5;
+
+                var randomNumber = (Math.floor(Math.random() *6));
+                count++
+                if(randomNumberChoosed==randomNumber)
+                {
+                    score++;
+                    document.getElementById("oops").innerHTML ="You got it! ";
+                    document.getElementById("yourscore").innerHTML ="Your score : " + score;                     
+                
+                }
+                else{
+                    document.getElementById("oops").innerHTML ="Oops! The number was " + randomNumber;
+                }
+           }
+
+
+           document.getElementById("luck").onclick = function(){
+            var percentage = 0;
+            percentage=(score/count)*100
+            if(isNaN(percentage))
+            alert("Your luck % is : 0. Please start the game! ");
+            else
+            alert("Your luck % is : "+ percentage.toPrecision(3)+ "%");
+           }
+
+        </script>
+
+
+
+
+
+    </body>
+</html>

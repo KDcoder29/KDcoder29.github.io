@@ -1,0 +1,138 @@
+
+body{
+
+    background: linear-gradient(to bottom, #ffffff, #b5f2ee);
+
+}
+.navbar {
+    display: flex;
+    background-color: #a382da;
+    justify-content: center;
+    position: fixed;
+     top: 0;
+    width: 100%;
+     font-family: 'Days One', sans-serif;
+    z-index: 9999; /* Add a higher z-index to ensure the navbar is on top */
+       }
+
+.testyourluck {
+font-size: 2rem;
+}
+
+
+.content-gamerules {
+text-align: center;
+margin-top: 120px; /* Adjust the margin as needed to create space below the navbar */
+}
+#game{
+    position: relative;
+    /* top:110px  ; */
+    /* left: 680px; */
+    background-color:lightblue;
+    color: black;
+    border-color: black;
+    border-radius: 12px;
+    
+    padding: 10px;
+    transition: transform 0.2s;
+    
+    
+}
+#game:hover{
+    transform: scale(1.2);
+}
+.offcanvas-start{
+z-index: 9999;;
+}
+
+
+
+.content-howmanyfingers {
+text-align: center;
+margin-top: 20px; /* Adjust the margin as needed to create space below the navbar */
+font-family: 'Days One', sans-serif;
+}
+
+.how {
+
+font-size: 1.5rem;
+}
+
+
+@media screen and (max-width: 767px) {
+.testyourluck {
+font-size: 1.5rem;
+transform: scale(1.3);
+}
+}
+
+
+
+
+
+button{
+    
+    justify-content: center;
+    background-color: lightblue ;
+    color: black;
+    max-width: 100%;
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+    transition: transform 0.2s;
+    border-radius: 4px;
+}
+button:hover{
+    /* color: rgb(65, 243, 0); */
+    transform: scale(1.3)
+}
+.content-buttons{
+text-align: center;
+margin-top: 22px;
+}
+
+.content-oops{
+/* display: none; */
+text-align: center;
+margin-top: 19px;
+font-size: 1.3rem;
+font-family: 'Days One', sans-serif;
+}
+
+.content-yourscore{
+text-align: center;
+margin-top: 39px;
+font-family: 'Days One', sans-serif;
+font-size: 1.5rem;
+}
+
+
+.content-viewmyluck{
+text-align: center;
+margin-top: -5px;
+font-family: 'Days One', sans-serif;
+font-size: 1.1rem;
+}
+
+
+.viewmyluck{
+width: 100px;
+height: 77px;
+}
+
+.content-reset{
+text-align: center;
+margin-top: 30px;
+font-family: 'Days One', sans-serif;
+}
+#reset{
+height: 60px;
+width: 65px;
+}
+
+.content-developed{
+text-align: center;
+margin-top: 13px;
+font-family: 'Days One', sans-serif;
+font-size: 1.1rem;
+}
